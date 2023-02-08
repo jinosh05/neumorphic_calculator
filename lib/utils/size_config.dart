@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/widgets.dart';
 
 class SizeConfig {
@@ -207,8 +209,8 @@ class SizeConfig {
     heightMultiplier = _blockHeight;
     widthMultiplier = _blockWidth;
 
-    print('screen_width $screenWidth');
-    print('screen_height $screenHeight');
+    log('screen_width $screenWidth');
+    log('screen_height $screenHeight');
 
     /* width */
     width_0_8 = widthMultiplier * 0.8;

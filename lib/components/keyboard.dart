@@ -20,8 +20,12 @@ class Keyboard extends StatelessWidget {
         children: <Widget>[
           ButtonRow(
             buttons: [
-              Button.large(
+              Button(
                 text: 'AC',
+                onPressed: onPressed,
+              ),
+              Button(
+                text: 'C',
                 onPressed: onPressed,
               ),
               Button(

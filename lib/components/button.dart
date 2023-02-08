@@ -10,13 +10,6 @@ class Button extends StatelessWidget {
     this.isBig = false,
   });
 
-  const Button.large({
-    super.key,
-    required this.text,
-    required this.onPressed,
-    this.isBig = true,
-  });
-
   const Button({
     super.key,
     required this.text,
@@ -31,7 +24,6 @@ class Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      flex: isBig ? 2 : 1,
       child: Container(
         alignment: isBig ? null : Alignment.center,
         margin: EdgeInsets.symmetric(
@@ -41,16 +33,14 @@ class Button extends StatelessWidget {
           padding: EdgeInsets.all(
             SizeConfig.fs_03_5,
           ),
-          style: NeumorphicStyle(
+          style: const NeumorphicStyle(
             depth: 3,
             surfaceIntensity: 0.3,
             lightSource: LightSource.topLeft,
             shadowLightColor: Colors.white54,
             shadowDarkColor: Colors.white30,
             color: Colors.black,
-            boxShape: isBig
-                ? const NeumorphicBoxShape.stadium()
-                : const NeumorphicBoxShape.circle(),
+            boxShape: NeumorphicBoxShape.circle(),
             shape: NeumorphicShape.concave,
           ),
           child: Text(

@@ -16,6 +16,8 @@ class Memory {
 
     if (command == 'AC') {
       _allClear();
+    } else if (command == 'C') {
+      _removeLast();
     } else if (operations.contains(command)) {
       _setOperation(command);
     } else {
@@ -69,6 +71,14 @@ class Memory {
     _bufferIndex = 0;
     _operation = null;
     _wipeValue = false;
+  }
+
+  _removeLast() {
+    _value = _value.substring(0, _value.length - 1);
+    if (_value.isEmpty) {
+      _value = "0";
+    }
+    _buffer[_bufferIndex] = double.tryParse(_value) ?? 0;
   }
 
   _calculate() {
