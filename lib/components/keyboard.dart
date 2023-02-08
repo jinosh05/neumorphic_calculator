@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:neumorphic_calculator/utils/size_config.dart';
 
 import 'button.dart';
 import 'button_row.dart';
@@ -14,19 +15,17 @@ class Keyboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 500,
+      height: SizeConfig.heightMultiplier * 62,
       child: Column(
         children: <Widget>[
           ButtonRow(
             buttons: [
               Button.large(
                 text: 'AC',
-                color: Button.darkButtonColor,
                 onPressed: onPressed,
               ),
               Button(
                 text: '%',
-                color: Button.darkButtonColor,
                 onPressed: onPressed,
               ),
               Button.operation(
@@ -35,7 +34,6 @@ class Keyboard extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 1),
           ButtonRow(
             buttons: [
               Button(
@@ -56,7 +54,6 @@ class Keyboard extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 1),
           ButtonRow(
             buttons: [
               Button(
@@ -77,7 +74,6 @@ class Keyboard extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 1),
           ButtonRow(
             buttons: [
               Button(
@@ -98,10 +94,13 @@ class Keyboard extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 1),
           ButtonRow(
             buttons: [
-              Button.large(
+              Button(
+                text: '00',
+                onPressed: onPressed,
+              ),
+              Button(
                 text: '0',
                 onPressed: onPressed,
               ),
