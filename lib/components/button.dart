@@ -8,6 +8,7 @@ class Button extends StatelessWidget {
     required this.text,
     required this.onPressed,
     this.isBig = false,
+    this.widget,
   });
 
   const Button({
@@ -15,9 +16,11 @@ class Button extends StatelessWidget {
     required this.text,
     required this.onPressed,
     this.isBig = false,
+    this.widget,
   });
 
   final String text;
+  final Widget? widget;
   final bool isBig;
   final void Function(String) onPressed;
 
@@ -43,14 +46,15 @@ class Button extends StatelessWidget {
             boxShape: NeumorphicBoxShape.circle(),
             shape: NeumorphicShape.concave,
           ),
-          child: Text(
-            text,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: SizeConfig.fs_04,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
+          child: widget ??
+              Text(
+                text,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: SizeConfig.fs_04,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
           onPressed: () => onPressed(text),
         ),
       ),
