@@ -24,13 +24,13 @@ class Display extends StatelessWidget {
               child: AutoSizeText(
                 text,
                 minFontSize: 20,
-                maxFontSize: 80,
+                maxFontSize: 60,
                 maxLines: 1,
                 textAlign: TextAlign.end,
                 style: const TextStyle(
-                  fontWeight: FontWeight.w100,
+                  fontWeight: FontWeight.w300,
                   decoration: TextDecoration.none,
-                  fontSize: 80,
+                  fontSize: 60,
                   color: Colors.white,
                 ),
               ),
