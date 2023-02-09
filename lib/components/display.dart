@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:neumorphic_calculator/utils/size_config.dart';
 
 class Display extends StatelessWidget {
   const Display({
@@ -14,7 +15,7 @@ class Display extends StatelessWidget {
     return Expanded(
       flex: 1,
       child: Container(
-        color: Colors.black,
+        color: SizeConfig.isDarkMode ? Colors.black : Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -27,11 +28,11 @@ class Display extends StatelessWidget {
                 maxFontSize: 60,
                 maxLines: 1,
                 textAlign: TextAlign.end,
-                style: const TextStyle(
+                style: TextStyle(
                   fontWeight: FontWeight.w300,
                   decoration: TextDecoration.none,
                   fontSize: 60,
-                  color: Colors.white,
+                  color: !SizeConfig.isDarkMode ? Colors.black : Colors.white,
                 ),
               ),
             ),
