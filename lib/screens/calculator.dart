@@ -28,9 +28,9 @@ class _CalculatorState extends State<Calculator> {
 
     return NeumorphicApp(
       debugShowCheckedModeBanner: false,
-      color: Colors.black,
+      color: SizeConfig.isDarkMode ? Colors.black : Colors.white,
       home: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: SizeConfig.isDarkMode ? Colors.black : Colors.white,
         body: SafeArea(
           child: Column(
             children: [
@@ -39,11 +39,13 @@ class _CalculatorState extends State<Calculator> {
                 padding: EdgeInsets.all(SizeConfig.fs_1_5),
                 child: NeumorphicText(
                   "Calculator",
-                  style: const NeumorphicStyle(
-                    color: Colors.white,
+                  style: NeumorphicStyle(
+                    color: !SizeConfig.isDarkMode ? Colors.black : Colors.white,
                     lightSource: LightSource.topLeft,
-                    shadowLightColor: Colors.black54,
-                    shadowDarkColor: Colors.black26,
+                    shadowLightColor:
+                        SizeConfig.isDarkMode ? Colors.white54 : Colors.black54,
+                    shadowDarkColor:
+                        SizeConfig.isDarkMode ? Colors.white24 : Colors.black26,
                   ),
                   textStyle: NeumorphicTextStyle(
                     fontSize: SizeConfig.fs_06,

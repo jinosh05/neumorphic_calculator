@@ -1,5 +1,7 @@
 import 'dart:developer';
+import 'dart:ui';
 
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/widgets.dart';
 
 class SizeConfig {
@@ -185,7 +187,11 @@ class SizeConfig {
       fs_24,
       fs_25;
 
+  static late bool isDarkMode;
+
   void init(BoxConstraints constraints, Orientation orientation) {
+    var brightness = SchedulerBinding.instance.window.platformBrightness;
+    isDarkMode = brightness == Brightness.dark;
     if (orientation == Orientation.portrait) {
       screenWidth = constraints.maxWidth;
       screenHeight = constraints.maxHeight;
