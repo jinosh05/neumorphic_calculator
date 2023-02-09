@@ -28,7 +28,7 @@ class Keyboard extends StatelessWidget {
                 text: 'C',
                 widget: Icon(
                   Icons.backspace,
-                  color: Colors.white,
+                  color: !SizeConfig.isDarkMode ? Colors.black : Colors.white,
                   size: SizeConfig.fs_04,
                 ),
                 onPressed: onPressed,
