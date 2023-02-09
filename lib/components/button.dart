@@ -36,21 +36,23 @@ class Button extends StatelessWidget {
           padding: EdgeInsets.all(
             SizeConfig.fs_03_5,
           ),
-          style: const NeumorphicStyle(
+          style: NeumorphicStyle(
             depth: 3,
             surfaceIntensity: 0.3,
             lightSource: LightSource.topLeft,
-            shadowLightColor: Colors.white54,
-            shadowDarkColor: Colors.white30,
-            color: Colors.black,
-            boxShape: NeumorphicBoxShape.circle(),
+            shadowLightColor:
+                !SizeConfig.isDarkMode ? Colors.black54 : Colors.white54,
+            shadowDarkColor:
+                !SizeConfig.isDarkMode ? Colors.black38 : Colors.white30,
+            color: SizeConfig.isDarkMode ? Colors.black : Colors.white,
+            boxShape: const NeumorphicBoxShape.circle(),
             shape: NeumorphicShape.concave,
           ),
           child: widget ??
               Text(
                 text,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: !SizeConfig.isDarkMode ? Colors.black : Colors.white,
                   fontSize: SizeConfig.fs_04,
                   fontWeight: FontWeight.w600,
                 ),
