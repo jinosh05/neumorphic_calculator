@@ -31,14 +31,15 @@ class Button extends StatelessWidget {
         ),
         child: NeumorphicButton(
           style: NeumorphicStyle(
-            depth: 3,
+            depth: 1.5,
+            intensity: 2,
             surfaceIntensity: 0.3,
             lightSource: LightSource.topLeft,
             shadowLightColor:
-                !SizeConfig.isDarkMode ? Colors.black54 : Colors.white54,
+                !SizeConfig.isDarkMode ? Colors.black26 : Colors.white54,
             shadowDarkColor:
-                !SizeConfig.isDarkMode ? Colors.black38 : Colors.white30,
-            color: SizeConfig.isDarkMode ? Colors.black : Colors.white,
+                !SizeConfig.isDarkMode ? Colors.black26 : Colors.white30,
+            color: SizeConfig.isDarkMode ? Colors.black : Colors.white70,
             boxShape: const NeumorphicBoxShape.circle(),
             shape: NeumorphicShape.concave,
           ),
@@ -51,7 +52,7 @@ class Button extends StatelessWidget {
                   text,
                   style: TextStyle(
                     color: !SizeConfig.isDarkMode ? Colors.black : Colors.white,
-                    fontSize: SizeConfig.fs_03_5,
+                    fontSize: SizeConfig.fs_04,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
