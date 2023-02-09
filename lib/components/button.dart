@@ -7,7 +7,6 @@ class Button extends StatelessWidget {
     super.key,
     required this.text,
     required this.onPressed,
-    this.isBig = false,
     this.widget,
   });
 
@@ -15,20 +14,18 @@ class Button extends StatelessWidget {
     super.key,
     required this.text,
     required this.onPressed,
-    this.isBig = false,
     this.widget,
   });
 
   final String text;
   final Widget? widget;
-  final bool isBig;
   final void Function(String) onPressed;
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        alignment: isBig ? null : Alignment.center,
+        alignment: Alignment.center,
         margin: EdgeInsets.symmetric(
           vertical: SizeConfig.imgSize_1 / 2,
         ),
