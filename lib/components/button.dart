@@ -27,12 +27,9 @@ class Button extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         margin: EdgeInsets.symmetric(
-          vertical: SizeConfig.imgSize_1 / 2,
+          vertical: SizeConfig.fs_1_2,
         ),
         child: NeumorphicButton(
-          padding: EdgeInsets.all(
-            SizeConfig.fs_03_5,
-          ),
           style: NeumorphicStyle(
             depth: 3,
             surfaceIntensity: 0.3,
@@ -45,15 +42,20 @@ class Button extends StatelessWidget {
             boxShape: const NeumorphicBoxShape.circle(),
             shape: NeumorphicShape.concave,
           ),
-          child: widget ??
-              Text(
-                text,
-                style: TextStyle(
-                  color: !SizeConfig.isDarkMode ? Colors.black : Colors.white,
-                  fontSize: SizeConfig.fs_04,
-                  fontWeight: FontWeight.w600,
+          child: Container(
+            alignment: Alignment.center,
+            width: SizeConfig.width_23,
+            height: SizeConfig.width_23,
+            child: widget ??
+                Text(
+                  text,
+                  style: TextStyle(
+                    color: !SizeConfig.isDarkMode ? Colors.black : Colors.white,
+                    fontSize: SizeConfig.fs_03_5,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
-              ),
+          ),
           onPressed: () => onPressed(text),
         ),
       ),
