@@ -81,10 +81,11 @@ packages:
   flutter_neumorphic:
     dependency: "direct main"
     description:
-      name: flutter_neumorphic
-      sha256: "02606d937a3ceaa497b8a7c25f3efa95188bf93d77ebf0bd6552e432db4c2ec6"
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: f2c0431228bf15cd7179b56f1e66bece19699d6e
+      url: "https://github.com/jinosh05/Flutter-Neumorphic"
+    source: git
     version: "3.2.0"
   flutter_test:
     dependency: "direct dev"
@@ -202,4 +203,3 @@ packages:
     version: "2.1.4"
 sdks:
   dart: ">=2.19.0 <4.0.0"
-  flutter: ">=1.13.18"
