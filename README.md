@@ -16,6 +16,8 @@ Wanna try Neumorphism, fork this repo and try our latest Neumorphic Calculator.
 ![](light.png)
 
 
+# Preview 
+![](calc.gif)
 ## Build Instructions
 
 ### Install Flutter
