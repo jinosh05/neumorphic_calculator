@@ -6,9 +6,10 @@ class Display extends StatelessWidget {
   const Display({
     super.key,
     required this.text,
+    required this.previousText,
   });
 
-  final String text;
+  final String text, previousText;
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +21,19 @@ class Display extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            Expanded(
+                child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                previousText,
+                style: TextStyle(
+                  fontWeight: FontWeight.w300,
+                  decoration: TextDecoration.none,
+                  fontSize: SizeConfig.fs_04,
+                  color: !SizeConfig.isDarkMode ? Colors.black : Colors.white,
+                ),
+              ),
+            )),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: AutoSizeText(

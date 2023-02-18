@@ -101,4 +101,8 @@ class Memory {
   String get value {
     return _value;
   }
+
+  String get previousValue {
+    return _buffer.first.toString();
+  }
 }
