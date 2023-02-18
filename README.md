@@ -4,7 +4,16 @@ Wanna try Neumorphism, fork this repo and try our latest Neumorphic Calculator.
 * Easily understandable and responsive code . 
 * Dark and Light theme base on device theme mode
 
-![](none.gif)
+
+
+# Screenshots
+
+## Dark Theme
+![](dark.png)
+
+
+## Light Theme
+![](light.png)
 
 
 ## Build Instructions
