@@ -56,7 +56,7 @@ class _CalculatorState extends State<Calculator> {
                 previousText: double.parse(memory.previousValue) ==
                         double.parse(memory.value)
                     ? ""
-                    : memory.previousValue,
+                    : '${memory.previousValue} ${memory.operatorString}',
                 text: memory.value,
               ),
               Keyboard(

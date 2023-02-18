@@ -105,4 +105,8 @@ class Memory {
   String get previousValue {
     return _buffer.first.toString();
   }
+
+  String get operatorString {
+    return _operation ?? "";
+  }
 }
