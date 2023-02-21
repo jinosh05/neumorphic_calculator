@@ -26,7 +26,10 @@ class _CalculatorState extends State<Calculator> {
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
-    return NeumorphicApp(
+    return MaterialApp(
+      theme: ThemeData(
+        useMaterial3: true,
+      ),
       debugShowCheckedModeBanner: false,
       color: SizeConfig.isDarkMode ? Colors.black : Colors.white,
       home: Scaffold(
