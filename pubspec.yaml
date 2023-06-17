@@ -1,5 +1,5 @@
 name: neumorphic_calculator
-description: A new Flutter project.
+description: A simple Calculator made in Flutter with neumorphism
 
 publish_to: "none"
 version: 1.0.0+1
